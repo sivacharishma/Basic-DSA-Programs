@@ -1,0 +1,31 @@
+#User function Template for python3
+class Solution:
+    def getSecondLargest(self, arr):
+        # Code Here
+        # Check if the array has less than 2 elements
+        if len(arr) < 2:
+            return -1
+        
+        # Initialize the largest and second largest
+        largest = second_largest = -1
+        
+        for num in arr:
+            if num > largest:
+                second_largest = largest
+                largest = num
+            elif num > second_largest and num != largest:
+                second_largest = num
+        
+        # If second_largest is still -1, it means there's no second largest element
+        return second_largest
+
+
+
+if __name__ == "__main__":
+    t = int(input())
+    for _ in range(t):
+        arr = list(map(int, input().split()))
+        ob = Solution()
+        ans = ob.getSecondLargest(arr)
+        print(ans)
+        print("~")
