@@ -1,0 +1,15 @@
+class Solution:
+    def missingNumber(self, nums: List[int]) -> int:
+        # Iterate over numbers from 1 to len(nums) (inclusive)
+        for i in range(1, len(nums) + 1):
+            flag = 0  # Initialize flag to track if the current number is found in the list
+            # Iterate over each number in the nums list
+            for j in range(len(nums)):
+                if nums[j] == i:  # Check if the current number i is in the list
+                    flag = 1  # Set flag to 1 if the number i is found
+                    break  # Break out of the loop as we found the number
+            # If the number i is not found in the list (flag is still 0), return i as the missing number
+            if flag == 0:
+                return i
+        # In case no missing number is found (should not happen in a valid case), return 0
+        return 0
