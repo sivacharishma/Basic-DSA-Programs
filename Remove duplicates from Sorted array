@@ -1,9 +1,24 @@
 class Solution:
+    # Define the method removeDuplicates which takes a list of integers as input
     def removeDuplicates(self, nums: List[int]) -> int:
-        i=0
+        
+        # Initialize a pointer 'i' to track the position where unique elements will be placed
+        i = 0
+        
+        # Iterate over the list with pointer 'j' to check each element
         for j in range(len(nums)):
-            if (nums[i]!=nums[j]):
-                nums[i+1]=nums[j]
-                i+=1
-        return len(nums[:i+1])
+            
+            # Check if the current element is different from the last unique element
+            if nums[i] != nums[j]:
+                
+                # Move the unique element to the next position after 'i'
+                nums[i + 1] = nums[j]
+                
+                # Increment 'i' to point to the next position for the next unique element
+                i += 1
+        
+        # Return the length of the sublist with unique elements
+        # 'nums[:i + 1]' represents the unique elements up to index 'i'
+        return len(nums[:i + 1])
+
         
