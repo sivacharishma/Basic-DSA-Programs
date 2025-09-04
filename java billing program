@@ -1,0 +1,68 @@
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Welcome to Ace restaurant");
+        System.out.print("Please enter your name:\n");
+        String name=sc.nextLine();
+        System.out.println("Hey "+name+" ,"+"What do you like to have");;
+        System.out.println("1.veg pulao--40rs");
+        System.out.println("2.curd rice--35rs");
+        System.out.println("3.Chicken Curry--120rs");
+        System.out.println("4.Chicken Biryani--150rs");
+        System.out.println("5.Double ka meetha--25rs");
+        System.out.println("Select from the menu");
+        int n=sc.nextInt();
+        System.out.println("enter your quantity");
+        int q=sc.nextInt();
+        switch(n)
+        {
+            case 1:
+                int amt1=40*q;
+                System.out.println("You have selected Veg pulao pay"+amt1+"rs");
+                int iamt1=sc.nextInt();
+                if(iamt1==amt1)
+                 System.out.println("Order Placed , Kindly wait");
+                 else
+                 System.out.println("Invalid amt,retry");
+                  
+                break;
+            case 2:
+                int amt2=35*q;
+                System.out.println("You have selected Curd Rice pay "+amt2+"rs");
+                int iamt2=sc.nextInt();
+                if(iamt2==amt2)
+                 System.out.println("Order Placed , Kindly wait");
+                 else
+                 System.out.println("Invalid amt,retry");
+                break;
+            case 3:
+              int amt3=120*q;
+              System.out.println("You have selectedChicken Curry pay"+amt3+"rs");
+              int iamt3=sc.nextInt();
+                if(iamt3==amt3)
+                 System.out.println("Order Placed , Kindly wait");
+                 else
+                 System.out.println("Invalid amt,retry");
+              break;
+            case 4:
+              int amt4=120*q;
+              System.out.println("You have selected Chicken Biryani pay "+amt4+"rs");
+              int iamt4=sc.nextInt();
+                if(iamt4==amt4)
+                 System.out.println("Order Placed , Kindly wait");
+                 else
+                 System.out.println("Invalid amt,retry");
+              break;
+           case 5:
+              int amt5=25*q;
+              System.out.println("You have selected Double ka meetha pay"+amt5+"rs");
+              int iamt5=sc.nextInt();
+                if(iamt5==amt5)
+                 System.out.println("Order Placed , Kindly wait");
+                 else
+                 System.out.println("Invalid amt,retry");
+              break;
+        }
+    }
+}
