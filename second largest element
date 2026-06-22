@@ -7,14 +7,14 @@ class Main {
        for(int i=0;i<n;i++){
            arr[i]=sc.nextInt();
        }
-       int max=arr[0];
-       int sm=arr[0];//second max 
+       int max=Integer.MIN_VALUE;
+       int sm=Integer.MIN_VALUE;//second max 
        for(int i=0;i<n;i++){
            if(arr[i]>max){
-               sm=max;//before updating max keep the max value in second max variable
+               sm=max;
                max=arr[i];
            }
-            else if(arr[i]>sm && arr[i]!=max){
+           else if(arr[i]>sm && arr[i]!=max){
                sm=arr[i];
            }
        }
